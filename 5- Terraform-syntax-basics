@@ -1,0 +1,33 @@
+Terraform supported syntaxes
+============================
+1- Single‑Line Comment (#)
+      # This is a single-line comment
+   Single‑Line Comment (//)
+      // This is also a single-line comment
+   Multi‑Line Comment (/* ... */) Used for longer explanations or temporarily disabling blocks of code.
+     /*
+     This is a multi-line comment.
+     It can span multiple lines.
+     Useful for documentation or debugging.
+     */
+   Inline Comments (End of Line)
+      location = "East US"  # Azure region
+2- Strings are represented by double quoted sequence,   Single quotes (' ') are not allowed
+      name     = "my-resource-group"
+3- Terraform (HCL) uses Heredoc syntax to represent multi‑line strings
+
+Basic Heredoc Syntax
+value = <<EOF
+This is a
+multi-line
+string
+EOF
+
+Indented Heredoc (Preferred)
+value = <<-EOF
+  This is a
+  multi-line
+  string
+EOF
+4- Values are assigned as <key>=<value>
+5- 
