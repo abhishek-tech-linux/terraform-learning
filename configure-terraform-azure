@@ -10,7 +10,9 @@ Configure terraform so it can connect with azure
     - Azure cli tools
 3- https://learn.microsoft.com/cli/azure/install-azure-cli
    - az login //Browser opens → sign in
+   - az account list
    - az account set --subscription "SUBSCRIPTION_NAME"
+   - az group list --query "[][name]" -o tsv // list resource group in selected subscription
 4- Authenticate Using Service Principal (For Automation / CI/CD)
   - create service principal
       az ad sp create-for-rbac --name my-sp --role Contributor --scopes /subscriptions/<SUB_ID>
@@ -32,4 +34,7 @@ Configure terraform so it can connect with azure
     export AZURE_TENANT_ID="xxxxxxxx-xxxx"
     export AZURE_SUBSCRIPTION_ID="xxxxxxxx-xxxx"
 
-   
+6- configure Git 
+    git config --global user.name "firstname lastname"
+    git config --global user.email "email@example.com"
+7- 
