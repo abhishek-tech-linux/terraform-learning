@@ -1,0 +1,35 @@
+Configure terraform so it can connect with azure
+------------------------------------------------
+1- sign up with azure account
+2- Configure VScode -install extensions
+    - Bracket pair color DLW
+    - Azure terraform
+    - Hashicorp terraform
+    - Git extension pack
+    - Terraform azure autocomplete
+    - Azure cli tools
+3- https://learn.microsoft.com/cli/azure/install-azure-cli
+   - az login //Browser opens → sign in
+   - az account set --subscription "SUBSCRIPTION_NAME"
+4- Authenticate Using Service Principal (For Automation / CI/CD)
+  - create service principal
+      az ad sp create-for-rbac --name my-sp --role Contributor --scopes /subscriptions/<SUB_ID>
+      You’ll get:
+        clientId
+        clientSecret
+        tenantId
+  - Login Using Service Principal
+        az login --service-principal -u <clientId> -p <clientSecret> --tenant <tenantId>
+5- Authenticate Using environment variable  and restart VScode 
+    From Windows powershell
+    $env:AZURE_CLIENT_ID="xxxxxxxx-xxxx"
+    $env:AZURE_CLIENT_SECRET="xxxxxxxx"
+    $env:AZURE_TENANT_ID="xxxxxxxx-xxxx"
+    $env:AZURE_SUBSCRIPTION_ID="xxxxxxxx-xxxx"
+    From Linux
+    export AZURE_CLIENT_ID="xxxxxxxx-xxxx"
+    export AZURE_CLIENT_SECRET="xxxxxxxx"
+    export AZURE_TENANT_ID="xxxxxxxx-xxxx"
+    export AZURE_SUBSCRIPTION_ID="xxxxxxxx-xxxx"
+
+   
