@@ -1,2 +1,8 @@
 Introduction to HashiCorp Terraform
 -------------------------------------
+Terraform  is the IaC from Hashicorp.
+It is used for building , changing and managing infrastructure in a safe and repeatable way.
+human-readable, reusable 
+support coding best practices like version control.
+create plan and approve deployments.
+rollback to previous setup if not deployed correctly.
