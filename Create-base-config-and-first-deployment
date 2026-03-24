@@ -1,0 +1,11 @@
+1- Terraform related terms
+  Terraform configuration file 
+    - Files written in Hashicorp configuration language (HCL), files have a .tf extension
+  Working or Home directory
+    - Configurations made up of one or more files saved in a directory.
+    - it contains provider binaries, plan files and state files once terraform has run the configuration.
+  Terraform uses declarative model
+    - Declare the desired state of infra and it will be configured on azure to match the state.
+  Terraform persists state and configuration is idempotent
+    - Compares the new config state to state saved from previous terraform apply, if no changes to config, then it will not reapply the settings.
+  
