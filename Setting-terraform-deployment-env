@@ -1,0 +1,24 @@
+Requirement
+===========
+1- Terraform
+2- Azure Account
+3- Azure cli
+4- VScode
+5- git
+6- shell - bash,powershell
+------------------------------------------
+Installing terrafom in windows
+1- download terraform zip and extract
+2- copy the extracted binary file to desired terraform folder c:\devops\terraform
+3- search for advanced system setting link and add c:\devops\terraform in environment variable path
+install azure cli , VScode and Git
+4- Verify installation from cmd by running terraform --help
+===============================================
+Installing Terraform in Linux
+1- wget terraform zip file
+2- unzip terraform.zip
+3- mv terraform /usr/local/bin
+4- Verify installation from cmd by running terraform --help
+5- install azure cli  curl -sL https://aka.ms/installAzureCLIDeb |sudo bash
+6- install git apt-get install git
+7- snap install --classic-doce  for VScode
